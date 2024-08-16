@@ -6,6 +6,6 @@ var jogos = ["Roblox", "Minecraft", "Terraria"];
     }
 
     function abcde() {
-   {console.log(sorteado());
-}}
+   console.log(sorteado());
+}
 /* parte de cima já é a roleta */
