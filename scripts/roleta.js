@@ -1,42 +1,39 @@
+var clicks = 0;
+
+function contarClicks() { // usado para que no final os cicks ssejam atualizados 
+    clicks++; // cada click conta +1 função
+    console.log("O número de vezes foi: " + clicks); 
+}
 
 var jogos = [
-
-{
-nome: 'Valorant',
-tipo: 'FPS',
-ano: 2020,
-descricao: function() {
-return `${this.nome} é um jogo de ${this.tipo} lançado em ${this.ano}.`;
-}
-},
-   
-{
-nome: 'Minecraftt',
-tipo: 'Sandbox',
-ano: 2011,
-descricao: function() {
-   return `${this.nome} é um jogo de ${this.tipo} lançado em ${this.ano}.`;
-}
-},
-
-      
-{
-nome: 'Roblox',
-tipo: 'Sandbox',
-ano: 2006,
-descricao: function() {
-   return `${this.nome} é um jogo de ${this.tipo} lançado em ${this.ano}.`;
-}
-},
+    {
+        nome: 'Valorant',
+        tipo: 'FPS',
+        ano: 2020,
+        clicks: 0, 
+    },
+    {
+        nome: 'Minecraft',
+        tipo: 'Sandbox',
+        ano: 2011,
+        clicks: 0, 
+    },
+    {
+        nome: 'Roblox',
+        tipo: 'Sandbox',
+        ano: 2006,
+        clicks: 0, 
+    }
 ];
 
-   function abcde() { 
-   const jogo = (function() {  
-      return jogos[Math.floor(Math.random() * jogos.length)];
- })();
+function abcde() { 
+    const jogo = (function() {  
+        return jogos[Math.floor(Math.random() * jogos.length)];
+    })(); // função abcde ( click ), chama o jogo ( array ) com a função de retornar e multiplicar pelo array
 
-
-   console.log(jogo);
-   console.log(jogo.descricao());
+    jogo.clicks++; // "reconta" a função clicks do jogo pra contar +1 quando foi selecionado e mossra o valor
+    contarClicks();  // clicks atualizados
+    console.log(jogo); // c.l no jogo
+    console.log(`Clique(s) no jogo ${jogo.nome}: ${jogo.clicks} vez(es).`); // c.l mostrando cliques no jogo e nome
 }
-/* parte de cima já é a roleta */
+   
