@@ -37,6 +37,8 @@ function abcde() {{ // { a mais pra fechar com o } no final do codigo pra integr
     console.log(`Clique(s) no jogo ${jogo.nome}: ${jogo.clicks} vezes.`); // c.l mostrando cliques no jogo e nome
 }
 
+jogos.sort((a, b) => b.clicks - a.clicks); // Coloca o array jogos pra serem ordenados numericamente 
+
 jogos.forEach(function(jogo2) { // jogo2 "chama" o conteudo do array(jogos) --> jogo é o sorteado e o jogo2 "representa" cada jogo
     console.log(`Nome: ${jogo2.nome}, Clique(s): ${jogo2.clicks} vezes.`);
 });
